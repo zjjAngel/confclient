@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: alpha
+  cloud:
+    config:
+#      uri: http://localhost:9130/
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:8763/eureka/
