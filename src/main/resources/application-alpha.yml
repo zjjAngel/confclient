@@ -1,55 +1,55 @@
-spring:
-  cloud:
-    config:
-      profile: alpha
-      label: master
-      uri: http://localhost:9130/
-      fail-fast: true
-      retry:
-        multiplier:   1000
-        max-attempts: 6
-        max-interval: 2000
-      discovery:
-        enabled: true
-        service-id: config-server
-    bus:
-      refresh:
-        enabled: true
-      trace:
-        enabled: false
-#  rabbitmq:
-#    host: 192.168.42.111
-#    port: 5762
-#    username: admin
-#    password: admin
-
-#    host: 192.168.42.111
-#    username: guest
-#    password: guest
-#    host: 127.0.0.1
-  application:
-    name: config-client
-
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://admin:admin@localhost:8763/eureka/
-#  spring.cloud.config.profile=dev
-#  spring.cloud.config.label=master
-server:
-  port: 9131
-#  management.endpoint.health.show-details=always
-#  management.endpoint.shutdown.enabled=true
-#  #hystrix.stream  开放所有的监控接口
-management:
-  endpoint:
-    health:
-      show-details: always
-    shutdown:
-      enabled: true
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
+##spring:
+##  cloud:
+##    config:
+##      profile: alpha
+##      label: master
+##      uri: http://localhost:9130/
+##      fail-fast: true
+##      retry:
+##        multiplier:   1000
+##        max-attempts: 6
+##        max-interval: 2000
+##      discovery:
+##        enabled: true
+##        service-id: config-server
+##    bus:
+##      refresh:
+##        enabled: true
+##      trace:
+##        enabled: false
+##  rabbitmq:
+##    host: 192.168.42.111
+##    port: 5762
+##    username: admin
+##    password: admin
+#
+##    host: 192.168.42.111
+##    username: guest
+##    password: guest
+##    host: 127.0.0.1
+##  application:
+##    name: config-client
+#
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://admin:admin@localhost:8763/eureka/
+##  spring.cloud.config.profile=dev
+##  spring.cloud.config.label=master
+#server:
+#  port: 9131
+##  management.endpoint.health.show-details=always
+##  management.endpoint.shutdown.enabled=true
+##  #hystrix.stream  开放所有的监控接口
+#management:
+#  endpoint:
+#    health:
+#      show-details: always
+#    shutdown:
+#      enabled: true
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#

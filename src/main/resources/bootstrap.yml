@@ -1,12 +1,23 @@
 spring:
-  profiles:
-    active: alpha
   cloud:
     config:
+      profile: alpha
+      label: master
 #      uri: http://localhost:9130/
+      fail-fast: true
+      retry:
+        multiplier:   1000
+        max-attempts: 6
+        max-interval: 2000
       discovery:
         enabled: true
         service-id: config-server
+      name: configcli
+    bus:
+      refresh:
+        enabled: true
+      trace:
+        enabled: false
 eureka:
   client:
     service-url:
